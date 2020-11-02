@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:hdi_academy/models/LearningSession.dart';
+import 'package:hdi_academy/managers/DataManager.dart';
 import 'package:provider/provider.dart';
 
 import 'constants.dart';
 import 'screens/PageViewLesson.dart';
 
 void main() {
+  //DataManager.instance.createDumpData();
+
   runApp(MultiProvider(
     providers: [
-      Provider<LearningSession>(create: (_) => LearningSession()),
+      ChangeNotifierProvider(
+        create: (_) => DataManager.instance.learningSession,
+        lazy: false,
+      ),
     ],
     child: MyApp(),
   ));

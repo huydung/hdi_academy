@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hdi_academy/constants.dart';
 import 'package:hdi_academy/models/LearningSession.dart';
 import 'package:provider/provider.dart';
@@ -14,36 +13,85 @@ class _TopNavigatorState extends State<TopNavigator> {
 
   @override
   void initState() {
-    learningSession = context.watch<LearningSession>();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    learningSession = context.watch<LearningSession>();
     return Container(
       height: kHDIAppBarHeight,
       child: Row(
         children: [
-          FaIcon(
-            FontAwesomeIcons.times,
-            size: kHDIIconSize,
-            color: kHDIColorWhite,
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: kHDISmallMargin,
+            ),
+            child: Icon(
+              Icons.clear,
+              size: kHDIIconSize,
+            ),
           ),
+          // FaIcon(
+          //   FontAwesomeIcons.times,
+          //   size: kHDIIconSize,
+          //   color: kHDIColorWhite,
+          // ),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
               children: [
-                Text(
-                  learningSession.currentLesson.title,
+                Positioned(
+                  bottom: -10,
+                  child: SliderTheme(
+                    child: Slider(
+                      min: 0,
+                      max: learningSession.currentChapter.lessonsCount
+                          .toDouble(),
+                      value: 3,
+                      activeColor: kHDIPrimaryColor,
+                      inactiveColor: kHDIColorSubtleGrey,
+                      onChanged: (double value) {},
+                    ),
+                    data: SliderTheme.of(context).copyWith(
+                        trackHeight: 6,
+                        thumbShape: RoundSliderThumbShape(
+                          enabledThumbRadius: 0.0,
+                        )),
+                  ),
                 ),
-                Slider(
-                  min: 0,
-                  max: learningSession.currentLesson.chapter.lessonsCount
-                      .toDouble(),
-                  value: learningSession.currentLesson.order.toDouble(),
-                  onChanged: (double value) {},
-                )
+                Positioned(
+                  top: 5,
+                  child: Text(
+                    learningSession.currentLesson.title,
+                    style: TextStyle(
+                      fontSize: kHDISubtitleFontSize,
+                      color: kHDIColorWhite,
+                    ),
+                  ),
+                ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: kHDISmallMargin,
+            ),
+            child: Icon(
+              Icons.apps,
+              size: kHDIIconSize,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: kHDISmallMargin,
+            ),
+            child: Icon(
+              Icons.bookmark_border,
+              size: kHDIIconSize,
             ),
           ),
         ],

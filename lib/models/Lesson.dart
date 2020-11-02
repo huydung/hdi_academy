@@ -8,5 +8,5 @@ class Lesson {
 
   Chapter chapter;
 
-  Lesson({this.title, this.id, this.order, this.finished, this.chapter});
+  Lesson({this.title, this.id, this.finished = false});
 }
