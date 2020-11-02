@@ -50,12 +50,12 @@ class _TopNavigatorState extends State<TopNavigator> {
                       max: learningSession.currentChapter.lessonsCount
                           .toDouble(),
                       value: 3,
-                      activeColor: kHDIPrimaryColor,
+                      activeColor: kHDIColorWhite,
                       inactiveColor: kHDIColorSubtleGrey,
                       onChanged: (double value) {},
                     ),
                     data: SliderTheme.of(context).copyWith(
-                        trackHeight: 6,
+                        trackHeight: 4,
                         thumbShape: RoundSliderThumbShape(
                           enabledThumbRadius: 0.0,
                         )),
@@ -74,16 +74,16 @@ class _TopNavigatorState extends State<TopNavigator> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 0,
-              horizontal: kHDISmallMargin,
-            ),
-            child: Icon(
-              Icons.apps,
-              size: kHDIIconSize,
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(
+          //     vertical: 0,
+          //     horizontal: kHDISmallMargin,
+          //   ),
+          //   child: Icon(
+          //     Icons.apps,
+          //     size: kHDIIconSize,
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 0,

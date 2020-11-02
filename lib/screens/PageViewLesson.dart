@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hdi_academy/constants.dart';
+import 'package:hdi_academy/widgets/LearningCard.dart';
 import 'package:hdi_academy/widgets/TopNavigator.dart';
 
 class PageViewLesson extends StatefulWidget {
@@ -19,7 +20,11 @@ class _PageViewLessonState extends State<PageViewLesson> {
               Container(
                 height: kHDIAppBarHeight,
                 child: TopNavigator(),
-              )
+              ),
+              SizedBox(
+                height: kHDISmallMargin,
+              ),
+              LearningCard(),
             ],
           ),
         ),

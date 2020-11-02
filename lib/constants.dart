@@ -18,6 +18,7 @@ const double kHDISubtitleFontSize = 20;
 const Color kHDISubtleColor = Color(0xFF90A4AE);
 const double kHDIIconSize = 30;
 const Color kHDIColorWhite = Colors.white;
+const Color kHDIColorBrightGrey = Color(0xFFDEDEDE);
 const Color kHDIColorSubtleGrey = Color(0xFF546E7A);
 
 class Routes {
