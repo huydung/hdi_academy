@@ -10,16 +10,16 @@ const double kHDIAppBarHeight = 56;
 const double kHDIStandardMargin = 20.0;
 const double kHDISmallMargin = 10.0;
 const double kHDISmallBorder = 4.0;
-const double kHDISmallFontSize = 10;
-const double kHDIDetailFontSize = 14;
-const double kHDIKeyPointFontSize = 60;
-const double kHDITitleFontSize = 40;
-const double kHDISubtitleFontSize = 20;
+const double kHDIFontSizeSmall = 16;
+const double kHDIFontSizeHuge = 60;
+const double kHDIFontSizeBig = 20;
 const Color kHDISubtleColor = Color(0xFF90A4AE);
 const double kHDIIconSize = 30;
 const Color kHDIColorWhite = Colors.white;
 const Color kHDIColorBrightGrey = Color(0xFFDEDEDE);
 const Color kHDIColorSubtleGrey = Color(0xFF546E7A);
+const Color kHDIColorGreen = Color(0xFF1B5E20);
+const Color kHDIColorPurple = Color(0xFF311B92);
 
 class Routes {
   static const String HOME = '/';

@@ -29,10 +29,9 @@ class MyApp extends StatelessWidget {
         //primarySwatch: kHDIPrimaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.dark,
-        backgroundColor: kHDIBGColor,
-        canvasColor: Colors.blueGrey[900],
         accentColor: kHDIPrimaryColor,
         primaryColor: kHDIBGColor,
+        buttonColor: kHDIColorWhite,
       ),
       initialRoute: Routes.LESSON,
       routes: {

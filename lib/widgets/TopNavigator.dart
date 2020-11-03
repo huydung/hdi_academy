@@ -3,6 +3,8 @@ import 'package:hdi_academy/constants.dart';
 import 'package:hdi_academy/models/LearningSession.dart';
 import 'package:provider/provider.dart';
 
+import 'RoundedIconButton.dart';
+
 class TopNavigator extends StatefulWidget {
   @override
   _TopNavigatorState createState() => _TopNavigatorState();
@@ -28,9 +30,9 @@ class _TopNavigatorState extends State<TopNavigator> {
               vertical: 0,
               horizontal: kHDISmallMargin,
             ),
-            child: Icon(
-              Icons.clear,
-              size: kHDIIconSize,
+            child: RoundedIconButton(
+              onPressed: () {},
+              icon: Icons.clear,
             ),
           ),
           // FaIcon(
@@ -43,7 +45,7 @@ class _TopNavigatorState extends State<TopNavigator> {
               alignment: AlignmentDirectional.center,
               children: [
                 Positioned(
-                  bottom: -10,
+                  bottom: -5,
                   child: SliderTheme(
                     child: Slider(
                       min: 0,
@@ -62,11 +64,11 @@ class _TopNavigatorState extends State<TopNavigator> {
                   ),
                 ),
                 Positioned(
-                  top: 5,
+                  top: 7,
                   child: Text(
                     learningSession.currentLesson.title,
                     style: TextStyle(
-                      fontSize: kHDISubtitleFontSize,
+                      fontSize: kHDIFontSizeSmall,
                       color: kHDIColorWhite,
                     ),
                   ),
@@ -89,9 +91,9 @@ class _TopNavigatorState extends State<TopNavigator> {
               vertical: 0,
               horizontal: kHDISmallMargin,
             ),
-            child: Icon(
-              Icons.bookmark_border,
-              size: kHDIIconSize,
+            child: RoundedIconButton(
+              icon: Icons.bookmark_border,
+              onPressed: () {},
             ),
           ),
         ],

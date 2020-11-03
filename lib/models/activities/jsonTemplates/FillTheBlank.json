@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "text": "Besides the external factors that you can not control anyway (such as an earth quake that destroy your city), **all of the outcomes you will got** comes from your **knowledge, decisions, and actions**. And even for external events, how you response to them is crucial. This famous quote by Charles R. Swindoll captures the essential of this idea: \"Life is 10% what happens to me and 90% of how I :1: it\".",
+  "type": "FILL_IN_BLANK",
+  "options": {
+    ":1:": ["react to", "complain about"]
+  }
+}
